@@ -1,0 +1,952 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: #FFF8FD;
+}
+
+
+/* Header Styles */
+
+.header {
+    height: 60px;
+    width: 1226px;
+    border-radius: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    justify-content: space-between;
+
+    background: rgba(255, 250, 250, 0.40);
+    backdrop-filter: blur(20px);
+}
+
+.header-cont {
+    padding-top: 10px;
+    padding-left: 10px;
+
+    justify-content: space-between;
+    display: flex;
+    width: 1215px;
+}
+
+#llogo {
+    border-radius: 7px;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.2s;
+    scale: 100%;
+
+    background-image: url(../KMT-Logo-Types/KMT-Main-Logo.svg);
+    height: 40px;
+    width: 40px;
+}
+
+#llogo:hover {
+    scale: 102%;
+    background-image: url(../KMT-Logo-Types/Gif-logo.gif);
+    /* filter: invert(42%) sepia(3%) saturate(1352%) hue-rotate(87deg) brightness(199%) contrast(119%); */
+}
+
+#logo-imge:hover .Main-logo {
+    display: hidden;
+}
+
+.three-filter {
+    display: flex;
+    width: 537px;
+    justify-content: space-between;
+    margin-top: 9px;
+    margin-bottom: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.three-filter p {
+    color: #091946;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.6s;
+    scale: 100%;
+}
+
+.three-filter p:hover {
+    scale: 101%;
+    color: #415385;
+}
+
+.Menu-imge {
+    padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.comt-menu {
+    height: 500px;
+    width: 282px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    border: 1px solid #EFEFEF;
+
+    position: relative;
+    right: 12px;
+    top: -70px;
+    z-index: 3;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity .5s, visibility .6s;
+}
+
+.comt-menu.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cont-mnu-contain {
+    width: 242px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+
+    transform: scale(0.97);
+    transition: transform .8s;
+}
+
+.comt-menu.open .cont-mnu-contain {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: relative;
+    top: 20px;
+    left: 231px;
+    height: 31px;
+    width: 31px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.close-btn:hover {
+    background-color: #FAFAFA;
+}
+
+.close-ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Main Conteiner Settings */
+
+.background-vectors {
+    background-image: url(../KMT-Logo-Types/Main-vector.svg);
+    background-size: 104%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height: 100vh;
+    width: 100%;
+    z-index: -100;
+    position: fixed;
+
+    margin-top: -40px;
+
+
+    transition: 2.2s;
+}
+
+.main-container {
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1000px;
+}
+
+.main-college {
+    padding-top: 180px;
+}
+
+.college-imge {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 686px;
+    height: 94px;
+}
+
+.under-main {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: #091946;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    width: 551px;
+    padding-top: 2px;
+}
+
+.any-questions-cont {
+    width: 396px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 76px;
+}
+
+.any-questions-text {
+    color: #091946;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin-left: auto;
+    margin-left: auto;
+
+    padding-bottom: 20px;
+}
+
+.two-buttons {
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding-bottom: 20px;
+}
+
+.left-button {
+    height: 60px;
+    width: 188px;
+    flex-shrink: 0;
+
+    border-radius: 14px;
+    background-color: #091946;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.4s;
+    scale: 100%;
+}
+
+.left-button:hover {
+    background-color: #2C3E72;
+    scale: 101%;
+}
+
+.left-button:active {
+    scale: 97%;
+}
+
+.left-button-text {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+
+    padding-top: 17px;
+    padding-bottom: 18px;
+}
+
+.font-dec {
+    text-decoration: none;
+}
+
+.right-button {
+    height: 60px;
+    width: 188px;
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    border: 4px solid #091946;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.4s;
+    scale: 100%;
+}
+
+.right-button:hover {
+    border: 4px solid #2C3E72;
+    scale: 101%;
+}
+
+.right-button:active {
+    scale: 97%;
+}
+
+.right-button-text {
+    color: #091946;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+
+    padding-top: 15px;
+}
+
+.under-buttons {
+    color: #091946;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+
+/* Second White Row Settings */
+
+.second-container {
+    width: 100%;
+    height: 224px;
+    background-color: #FFFFFF;
+}
+
+.second-inside-container {
+    width: 830px;
+    height: 97px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    padding-top: 120px;
+}
+
+.middle-line {
+    width: 2px;
+    height: 100px;
+    flex-shrink: 0;
+
+    background-color: #B0B8EA;
+}
+
+
+/* Third Container with blocks settings */
+
+.third-container {
+
+    width: 100%;
+    background-color: #FFF8FD;
+}
+
+.third-inside-container {
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-name {
+    width: 725px;
+    height: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 74px;
+    padding-bottom: 100px;
+}
+
+.cllum-blocks-container {
+    padding-top: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* Blcoks settings */
+
+.block {
+    height: 300px;
+    width: 395px;
+    flex-shrink: 0;
+
+    border-radius: 24px;
+    border: 2px solid rgba(249, 206, 238, 0.50);
+    background: #F9CEEE;
+
+    background-image: url(../KMT-Logo-Types/Cards-imges/1.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.7s;
+    scale: 100%;
+
+    margin-bottom: 20px;
+
+    display: none;
+}
+
+.block:hover {
+    scale: 101%;
+}
+
+.block:active {
+    scale: 97%;
+}
+
+.block:hover .block-name p {
+    color: #2C3E72;
+}
+
+.block:hover .left-year {
+    background: #2C3E72;
+}
+
+.block-container {
+    height: 240px;
+    width: 330px;
+
+    padding-top: 30px;
+    padding-left: 30px;
+
+    max-height: 240px;
+}
+
+.block-name p {
+    width: 285px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    color: #091946;
+    font-size: 24px;
+    font-weight: 500;
+
+    margin-bottom: 14px;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.7s;
+    scale: 100%;
+}
+
+.block-discription p {
+    width: 330px;
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    color: #091946;
+    font-size: 20px;
+}
+
+.bottom-block-cont {
+    height: 35px;
+    width: 304px;
+
+    display: flex;
+    max-height: 35px;
+}
+
+.left-year {
+    width: 100px;
+    height: 35px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: #091946;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.7s;
+    scale: 100%;
+}
+
+.left-year-text {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+
+    padding-top: 6px;
+}
+
+.duration-time p {
+    margin-left: 14px;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    color: #091946;
+    font-size: 14px;
+
+    font-weight: 500;
+    padding-top: 7px;
+}
+
+#block2 {
+    background: #B9F3E4;
+    background-image: url(../KMT-Logo-Types/Cards-imges/2.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid rgba(185, 243, 228, 0.50);
+}
+
+#block3 {
+    background: #FFD9C0;
+    background-image: url(../KMT-Logo-Types/Cards-imges/3.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #ffe5d4;
+}
+
+#block4 {
+    background: #DEE5FF;
+    background-image: url(../KMT-Logo-Types/Cards-imges/4.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #e5eafe;
+}
+
+#block5 {
+    background: #FFF6BC;
+    background-image: url(../KMT-Logo-Types/Cards-imges/5.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #fcf5c8;
+}
+
+#block6 {
+    background: #FFD9C0;
+    background-image: url(../KMT-Logo-Types/Cards-imges/7.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #ffe5d4;
+}
+
+#block7 {
+    background: #B9F3E4;
+    background-image: url(../KMT-Logo-Types/Cards-imges/6.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid rgba(185, 243, 228, 0.50);
+}
+
+#block8 {
+    background: #F9CEEE;
+    background-image: url(../KMT-Logo-Types/Cards-imges/8.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid rgba(249, 206, 238, 0.50);
+}
+
+#block9 {
+    background: #B0B8EA;
+    background-image: url(../KMT-Logo-Types/Cards-imges/9.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #bec5ef;
+}
+
+#block10 {
+    background: #FFF6BC;
+    background-image: url(../KMT-Logo-Types/Cards-imges/10.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom 0% right 0%;
+    border: 2px solid #fcf5c8;
+
+    margin-bottom: 50px;
+}
+
+.load-btn {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.load-more {
+    height: 60px;
+    width: 200px;
+    flex-shrink: 0;
+
+    border-radius: 14px;
+    border: 4px solid #091946;
+    background-color: #FFF8FD;
+
+    color: #091946;
+    font-size: 20px;
+    font-weight: 500;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.7s;
+    scale: 100%;
+}
+
+.load-more:hover{
+    scale: 101%;
+
+    border: 4px solid #415385;
+    color: #415385;
+}
+
+.load-more:active {
+    scale: 97%;
+}
+
+
+
+/* Four container form and google map */
+
+.four-container {
+    width: 100%;
+    height: 1000px;
+    background-color: #DEE5FF;
+}
+
+.four-container-inside {
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-and-map-block {
+    padding-top: 189px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-form {
+    width: 395px;
+}
+
+.jek {
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 120px;
+}
+
+.top-name-form p {
+    color: #091946;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.form-cont {
+    height: 218px;
+    padding-top: 100px;
+}
+
+.form-name-cont {
+    color: #091946;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+/* Form settings */
+
+.textboxserch {
+    height: 70px;
+    width: 395px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #162A60;
+    background-color: #DEE5FF;
+
+    margin-bottom: 54px;
+}
+
+.fir-block input::placeholder {
+    color: #091946;
+    font-size: 20px;
+}
+
+.fir-block input {
+    color: #091946;
+    font-size: 20px;
+}
+
+.sub-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.main-but:hover {
+    scale: 101%;
+    background: #162A60;
+}
+
+.main-but:active{
+    scale: 80%;
+}
+
+.main-but {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: #091946;
+    height: 60px;
+    width: 240px;
+    border-radius: 14px;
+    margin-top: 145px;
+
+    position: relative;
+    z-index: 1;
+    transition: 0.7s;
+    scale: 100%;
+}
+
+#text-in-button {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.rigth-map {
+    max-width: 395px;
+    max-height: 622px;
+}
+
+iframe {
+    width: 395px;
+    height: 622px;
+    border-radius: 24px;
+}
+
+
+
+
+/* Footer settings */
+
+.footer {
+    height: 176px;
+    width: 100%;
+    flex-shrink: 0;
+    background: #FFF8FD;
+}
+
+.footer-container {
+    width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-two-conts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.left-cont {
+    width: 365px;
+    padding-top: 30px;
+}
+
+.logo-settings {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#left-logo {
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+}
+
+#left-logo-text {
+    height: 26px;
+    width: 191px;
+    margin-left: 10px;
+}
+
+.under-logo-text p {
+    display: flex;
+    width: 365px;
+    height: 45px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #091946;
+    font-size: 14px;
+}
+
+.reg-code p {
+    width: 365px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #091946;
+    font-size: 14px;
+}
+
+.right-container {
+    width: 395px;
+    max-width: 395px;
+}
+
+.right-text-cont {
+    width: 332px;
+    max-width: 395px;
+}
+
+.right-text-cont p {
+    display: flex;
+    width: 332px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #091946;
+    font-size: 14px;
+
+    padding-bottom: 10px;
+    max-width: 332px;
+}
+
+#three-reg-info {
+    width: 320px;
+}
+
+.block-cont {
+    display: flex;
+    width: 320px;
+    max-width: 320px;
+}
+
+
+/* Animations settings */
+.anim{
+    opacity: 0;
+    transition: 1s;
+}
+
+.anim.show{
+    opacity: 1;
+    transition: 1.2s;
+}
+
+
+
+
+
+
+
+/* Adaptation scales */
+
+@media screen and (max-width: 1550px) {
+    .header {
+        max-width: 85.2%;
+        max-height: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-cont {
+        max-width: 98.2%;
+    }
+
+    .background-vectors {
+        background-image: url(../KMT-Logo-Types/Main-vector.svg);
+        background-size: 147%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    
+        height: 100vh;
+        width: 100%;
+        z-index: -100;
+        position: fixed;
+    
+        margin-top: -40px;
+    }
+}
