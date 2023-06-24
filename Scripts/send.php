@@ -14,7 +14,7 @@ $email = trim($email);
 
 if (
     mail(
-        "moyaknca93@mail.ru",
+        "moya@mail.ru",
         "Новое письмо",
         "Имя: " . $name . "\n" .
         "Почта: " . $email . "\n" .
